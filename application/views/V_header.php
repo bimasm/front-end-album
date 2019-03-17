@@ -60,27 +60,11 @@
 						<nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
 							<ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-								<li class="active"><a href="<?php echo base_url('Home'); ?>">Home</a></li>
+								<li class="active"><a href="<?php echo base_url('home'); ?>">Home</a></li>
 								<!-- 		<li class="has-children"> -->
 									<li>
-										<a href="<?php echo base_url('Category'); ?>">Category</a>
-					<!-- 				<ul class="dropdown">
-										<li><a href="#">Nature</a></li>
-										<li><a href="#">Portrait</a></li>
-										<li><a href="#">People</a></li>
-										<li><a href="#">Architecture</a></li>
-										<li><a href="#">Animals</a></li>
-										<li><a href="#">Sports</a></li>
-										<li><a href="#">Travel</a></li>
-										<li class="has-children">
-											<a href="#">Sub Menu</a>
-											<ul class="dropdown">
-												<li><a href="#">Menu One</a></li>
-												<li><a href="#">Menu Two</a></li>
-												<li><a href="#">Menu Three</a></li>
-											</ul>
-										</li>
-									</ul> -->
+										<a href="<?php echo base_url('category'); ?>">Category</a>
+
 								</li>
 								<li><a href="services.html">Services</a></li>
 								<li><a href="about.html">About</a></li>
@@ -91,20 +75,7 @@
 
 					<div class="col-6 col-xl-2 text-right" data-aos="fade-down">
 						<div class="d-none d-xl-inline-block">
-			<!-- 				<ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-								<li>
-									<a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-								</li>
-								<li>
-									<a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-								</li>
-								<li>
-									<a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-								</li>
-								<li>
-									<a href="#" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
-								</li>
-							</ul> -->
+
 							<a href="<?php echo base_url('Login'); ?>" class="btn text-white btn-secondary"><i class="fa fa-arrow-circle-left"></i> Login
 							</a>
 						</div>
