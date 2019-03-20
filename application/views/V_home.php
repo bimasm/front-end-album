@@ -30,7 +30,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-8 mb-5 mb-lg-0 mx-auto">
-					<a href="#" class="after-loop-item card border-0 card-snippets shadow-lg">
+					<a href="<?php echo base_url('Album'); ?>" class="after-loop-item card border-0 card-snippets shadow-lg">
 						<div class="card-body d-flex align-items-end flex-column text-right">
 							<h4>Nama Album</h4>
 							<p class="w-75">deskripsi album</p>
@@ -39,7 +39,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-8 mx-auto">
-					<a href="#" class="after-loop-item card border-0 card-guides shadow-lg">
+					<a href="<?php echo base_url('Album'); ?>" class="after-loop-item card border-0 card-guides shadow-lg">
 						<div class="card-body d-flex align-items-end flex-column text-right">
 							<h4>Nama Album</h4>
 							<p class="w-75">deskripsi album</p>

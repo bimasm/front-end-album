@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/style-template.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script id="_bsa_srv-CKYD6KQU_0" type="text/javascript" src="<?php echo base_url(); ?>assets/CKYD6KQU.json"></script><script id="_carbonads_projs" type="text/javascript" src="<?php echo base_url(); ?>assets/CKYIP53E.json"></script></head>
-	<body style="">
+	
 
 
 		<main>
@@ -17,8 +17,8 @@
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-11 py-5">
-							<h1 class="mb-2">Logo EAD Galery</h1>
-							<h2 class="m-0">Fast . Smart . Efficient</h2>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url();?>/assets/images/logoead.png" height="150"></a>
+							<!-- <h2 class="m-0" color="white">Fast . Smart . Efficient</h2> -->
 						</div>
 						<span><a href="<?php echo base_url('Login'); ?>" style="background-color: #f8f9fa; color: blue" class="btn btn-default btn-xl shadow">Login</a></span>
 					</div>
