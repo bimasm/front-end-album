@@ -18,7 +18,7 @@
 					<div class="row align-items-center">
 						<div class="col-lg-11 py-5">
 							<h1 class="mb-2">Logo EAD Galery</h1>
-							<h2 class="m-0">Fast . Smart . Efisien</h2>
+							<h2 class="m-0">Fast . Smart . Efficient</h2>
 						</div>
 						<span><a href="<?php echo base_url('Login'); ?>" style="background-color: #f8f9fa; color: blue" class="btn btn-default btn-xl shadow">Login</a></span>
 					</div>

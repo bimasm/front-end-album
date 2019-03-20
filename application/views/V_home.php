@@ -24,8 +24,8 @@
 					<a href="<?php echo base_url('Album'); ?>" class="after-loop-item card border-0 card-themes shadow-lg">
 						<div class="card-body d-flex align-items-end flex-column text-right">
 							<h4>Nama Album</h4>
-							<p class="w-75">Fully designed and ready to modify and publish!</p>
-							<i class="fal fa-paint-brush-alt"></i>
+							<p class="w-75">deskripsi album</p>
+							
 						</div>
 					</a>
 				</div>
@@ -33,8 +33,8 @@
 					<a href="#" class="after-loop-item card border-0 card-snippets shadow-lg">
 						<div class="card-body d-flex align-items-end flex-column text-right">
 							<h4>Nama Album</h4>
-							<p class="w-75">Code snippets ready to copy and paste!</p>
-							<i class="fal fa-code"></i>
+							<p class="w-75">deskripsi album</p>
+							
 						</div>
 					</a>
 				</div>
@@ -42,8 +42,8 @@
 					<a href="#" class="after-loop-item card border-0 card-guides shadow-lg">
 						<div class="card-body d-flex align-items-end flex-column text-right">
 							<h4>Nama Album</h4>
-							<p class="w-75">Guides and tutorials to help you learn Bootstrap!</p>
-							<i class="fal fa-books"></i>
+							<p class="w-75">deskripsi album</p>
+							
 						</div>
 					</a>
 				</div>
