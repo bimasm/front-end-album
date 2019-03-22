@@ -105,7 +105,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign In</title>
+	<title>Sign Up</title>
 	
 
 	<!--Bootsrap 4 CDN-->
@@ -122,11 +122,32 @@
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
 				<div class="card-body">
-					<h3>Sign In</h3>
+					<h3>Sign Up</h3>
 					<div class="d-flex justify-content-end social_icon">
 					</div>
 					<br>
-					<form>
+					<form action="">
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="far fa-address-book"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="full name">
+
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="email">
+
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-phone"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="phone number">
+
+						</div>
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -141,7 +162,7 @@
 							<input type="password" class="form-control" placeholder="password">
 						</div>
 						<div class="row align-items-center">
-							Don't have an account?&nbsp;&nbsp;<a href="<?php echo base_url('Register'); ?>">Sign Up</a>
+							Already have an account?&nbsp;&nbsp;<a href="<?php echo base_url('Login'); ?>"> Sign In</a>
 						</div>
 						<div class="form-group">
 					<!-- 	
@@ -150,7 +171,7 @@
 							<br>
 							<center>
 								<a href="<?php echo base_url('Home'); ?>">
-									<input type="button" value="Login" class="btn login_btn">
+									<input type="button" value="Register" class="btn login_btn">
 								</a>
 							</center>
 						</div>

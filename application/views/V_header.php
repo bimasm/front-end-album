@@ -5,10 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Start Bootstrap">
 	<title>EAD Galery</title>
+	<link rel="icon" href="<?php echo base_url(); ?>assets/images/logo.png">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/style-template.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script id="_bsa_srv-CKYD6KQU_0" type="text/javascript" src="<?php echo base_url(); ?>assets/CKYD6KQU.json"></script><script id="_carbonads_projs" type="text/javascript" src="<?php echo base_url(); ?>assets/CKYIP53E.json"></script></head>
+	<!-- <script id="_bsa_srv-CKYD6KQU_0" type="text/javascript" src="<?php echo base_url(); ?>assets/CKYD6KQU.json"></script><script id="_carbonads_projs" type="text/javascript" src="<?php echo base_url(); ?>assets/CKYIP53E.json"></script> --></head>
 	
 
 
