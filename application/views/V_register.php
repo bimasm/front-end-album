@@ -22,7 +22,7 @@
 	}
 
 	.card{
-		height: 370px;
+		height: 470px;
 		margin-top: auto;
 		margin-bottom: auto;
 		width: 400px;
