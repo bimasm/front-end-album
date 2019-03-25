@@ -17,11 +17,25 @@
 			<header class="masthead masthead-page mb-5">
 				<div class="container">
 					<div class="row align-items-center">
-						<div class="col-lg-11 py-5">
+						<div class="col-lg-9 py-3">
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url();?>/assets/images/logoead.png" height="150"></a>
 							<!-- <h2 class="m-0" color="white">Fast . Smart . Efficient</h2> -->
+
 						</div>
-						<span><a href="<?php echo base_url('Login'); ?>" style="background-color: #f8f9fa; color: blue" class="btn btn-default btn-xl shadow">Login</a></span>
+
+
+				<span>
+						<ul class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: white" class="fa fa-user"></i>&nbsp;bimasm</a>
+							<div class="dropdown-menu border-0 shadow animate slideIn" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#" style="color:black"><i style="color: black" class="fa fa-cog"></i> Dashboard</a>
+							<a class="dropdown-item" href="#" style="color:black"><i style="color: black" class="fa fa-power-off"></i> Logout</a>
+
+							</div>
+						</ul>
+						<!-- <a href="<?php echo base_url('Login'); ?>" style="background-color: #f8f9fa; color: blue" class="btn btn-default btn-xl shadow">Login</a> -->
+							
+						</span>
 					</div>
 				</div>
 				<svg style="pointer-events: none" class="wave" width="100%" height="50px" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 75">
