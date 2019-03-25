@@ -161,7 +161,7 @@
 							</div>
 							<input type="password" class="form-control" placeholder="password">
 						</div>
-						<div class="row align-items-center">
+						<div class="input-group form-group">
 							Already have an account?&nbsp;&nbsp;<a href="<?php echo base_url('Login'); ?>"> Sign In</a>
 						</div>
 						<div class="form-group">
