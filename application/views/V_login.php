@@ -126,19 +126,19 @@
 					<div class="d-flex justify-content-end social_icon">
 					</div>
 					<br>
-					<form>
+					<form method="post" action="<?php echo base_url('login/login'); ?>">
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" class="form-control" placeholder="username">
+							<input type="text" class="form-control" placeholder="username" name="username">
 
 						</div>
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" class="form-control" placeholder="password">
+							<input type="password" class="form-control" placeholder="password" name="password">
 						</div>
 						<div class="input-group form-group">
 							Don't have an account?&nbsp;&nbsp;<a href="<?php echo base_url('Register'); ?>">Sign Up</a>
@@ -150,7 +150,7 @@
 							<br>
 							<center>
 								<a href="<?php echo base_url('Home'); ?>">
-									<input type="button" value="Login" class="btn login_btn">
+									<input type="submit" value="Login" class="btn login_btn">
 								</a>
 							</center>
 						</div>

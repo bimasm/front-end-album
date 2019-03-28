@@ -13,7 +13,16 @@
 			<div class="row align-items-center">
 
 				<div class="col-lg-10 py-5">
-					<span ><a href="" data-toggle="modal" data-target="#modal_add" class="btn btn-primary btn-xl shadow"><i class="fa fa-plus"></i>&nbsp; Add Album</a></span>
+					<span ><?php
+					if ($this->session->userdata('status')=="is_active") {
+						echo '<a href="" data-toggle="modal" data-target="#modal_add" class="btn btn-primary btn-xl shadow"><i class="fa fa-plus"></i>&nbsp; Add Album</a>';
+					}else if ($this->session->userdata('status')=="not_active") {
+						echo '<button class="btn btn-primary btn-xl shadow" data-toggle="tooltip" data-placement="top" title="
+						Your account is not active"><i class="fa fa-plus"></i>&nbsp; Add Album</button>';
+					}else{
+						
+					}
+					?></span>
 				</div>
 
 			</div>

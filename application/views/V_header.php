@@ -25,15 +25,21 @@
 
 
 				<span>
-						<ul class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: white" class="fa fa-user"></i>&nbsp;bimasm</a>
+						<?php
+						if ($this->session->userdata('statses') == "login") {
+							echo '<ul class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: white" class="fa fa-user"></i>&nbsp;'.$this->session->userdata('nama').'</a>
 							<div class="dropdown-menu border-0 shadow animate slideIn" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="#" style="color:black"><i style="color: black" class="fa fa-cog"></i> Dashboard</a>
-							<a class="dropdown-item" href="#" style="color:black"><i style="color: black" class="fa fa-power-off"></i> Logout</a>
+							<a class="dropdown-item" href="'.base_url('login/logout').'" style="color:black"><i style="color: black" class="fa fa-power-off"></i> Logout</a>
 
 							</div>
-						</ul>
-						<!-- <a href="<?php echo base_url('Login'); ?>" style="background-color: #f8f9fa; color: blue" class="btn btn-default btn-xl shadow">Login</a> -->
+						</ul>';
+						}else{
+							echo '<a href="'.base_url('Login').'" style="background-color: #f8f9fa; color: blue" class="btn btn-default btn-xl shadow">Login</a>';
+						}
+						?>
+						
 							
 						</span>
 					</div>
