@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
--- Waktu pembuatan: 28 Mar 2019 pada 03.06
+-- Waktu pembuatan: 28 Mar 2019 pada 07.23
 -- Versi Server: 5.5.32
 -- Versi PHP: 5.4.16
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `webalbum` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `webalbum`;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `album`
+--
+
+CREATE TABLE IF NOT EXISTS `album` (
+  `album_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_album` varchar(50) NOT NULL,
+  `keterangan` varchar(50) NOT NULL,
+  `owner` varchar(50) NOT NULL,
+  PRIMARY KEY (`album_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data untuk tabel `album`
+--
+
+INSERT INTO `album` (`album_id`, `nama_album`, `keterangan`, `owner`) VALUES
+(2, 'album rekruitasi', 'asdasdasd', 'bimasm'),
+(3, 'album rekruitasi 16', 'asssdsad', 'bimasm');
 
 -- --------------------------------------------------------
 

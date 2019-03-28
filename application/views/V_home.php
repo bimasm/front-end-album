@@ -72,16 +72,16 @@
 				<h4 class="modal-title">Add Album</h4>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
-			<form action="" method = "POST" >
+			<form action="<?php echo base_url('home/do_add_album'); ?>" method = "POST" >
 				<div class="modal-body">  
 					<div class="col-md-12">
 						<div class="form-group">
 							<label class="form-control-label" for="input-address">Name</label>
-							<input type="text" class="form-control" name="termpayment_name" required="">
+							<input type="text" class="form-control" name="nama_album" required="">
 						</div>
 						<div class="form-group">
 							<label class="form-control-label" for="input-address">Description</label>
-							<textarea class="form-control"></textarea>
+							<textarea name="keterangan" class="form-control"></textarea>
 						</div>
 
 					</div>

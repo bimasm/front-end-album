@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->library(array('session','form_validation',));
 		$this->load->helper(array('url','form','security'));
+		$this->load->model('M_album');
 		
 		// $logged_in = $this->session->userdata('status')=='login' && ($this->session->userdata('profil')=='1' || $this->session->userdata('profil')=='2');
 		// if(!$logged_in){
@@ -21,6 +22,17 @@ class Home extends CI_Controller {
 		$this->load->view('V_header');
 		$this->load->view('V_home');
 		$this->load->view('V_footer');
+	}
+	public function do_add_album()
+	{
+		$nama_album=$this->input->post('nama_album');
+		$keterangan=$this->input->post('keterangan');
+		$owner=$this->session->userdata('username');
+		
+		
+		$this->M_album->add_album($nama_album,$keterangan,$owner);
+		redirect(base_url());
+		
 	}
 
 }
