@@ -197,6 +197,9 @@ a:hover {
 .rad-sidebar li:hover {
   background: #263340;
 }
+.active{
+  background: #263340;
+}
 
 .rad-sidebar li:hover .icon-bg {
   -webkit-transform: translate3d(0, 0, 0);

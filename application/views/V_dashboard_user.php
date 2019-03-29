@@ -60,7 +60,7 @@
 <aside>
   <nav class="rad-sidebar">
     <ul>
-      <li>
+      <li class="active">
         <a href="#" class="inbox">
           <i class="fa fa-dashboard"><span class="icon-bg rad-bg-success"></span></i>
           <span class="rad-sidebar-item">Dashboard</span>
