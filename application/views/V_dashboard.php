@@ -5,7 +5,11 @@
       font-family: 'Open Sans', sans-serif;
     }
     body {
-      /*    background: #FFFFFF;*/
+      display: block;
+      margin: 0px!important;
+    }
+    body {
+
       background-image: url('<?php echo base_url();?>assets/images/ini-bg.png');
       background-size: cover;
     }
@@ -20,12 +24,12 @@
     a {
       text-decoration: none;
     }
-/*  #header {
-    float: left;
-    width: 100%;
-    background: #ffffff;
-    position: relative;
-    }*/
+    #header {
+      float: left;
+      width: 100%;
+      background: #ffffff;
+      position: relative;
+    }
     .white-label {
       float: left;
       background: #33373B;
@@ -226,7 +230,7 @@
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     }
     .content {
-      float: left;
+
       background: #E9EEF4;
       width: 100%;
       height: calc(100% - 64px);
