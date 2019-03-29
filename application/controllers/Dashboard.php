@@ -20,7 +20,7 @@ class Dashboard extends CI_Controller {
 	{
 
 		// $this->load->view('V_header');
-		$this->load->view('V_dashboard');
+		$this->load->view('V_dashboard_user');
 		// $this->load->view('V_footer');
 	}
 
