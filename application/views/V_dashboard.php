@@ -308,9 +308,9 @@
         <div class="nav">
           <ul>
             <li class="nav-settings">
-              <div class="font-icon"><i class="fa fa-tasks"></i></div>
+              <div class="font-icon"><i class="fa fa-bell"></i></div>
             </li>
-            <li class="nav-mail">
+<!--             <li class="nav-mail">
               <div class="font-icon"><i class="fa fa-envelope-o"></i></div>
             </li>
             <li class="nav-calendar">
@@ -318,11 +318,17 @@
             </li>
             <li class="nav-chat">
               <div class="font-icon"><i class="fa fa-comments-o"></i></div>
-            </li>
+            </li> -->
             <li class="nav-profile">
               <div class="nav-profile-image">
-                <img src="https://skynet.marketecture.com/user_avatars/258800/Hayley-Helsten.jpg" alt="profile-img" alt="profile image">
-                <div class="nav-profile-name">Jane Smith<i class="fa fa-caret-down"></i></div>
+                <img src="" alt="profile-img" alt="profile image">
+                <?php 
+                if ($this->session->userdata('statses') == "login") { ?>
+                  <div class="nav-profile-name"><?php echo $this->session->userdata('nama') ?><i class="fa fa-caret-down"></i></div>
+                <?php }else { ?> 
+                  <div class="nav-profile-name"><i class="fa fa-caret-down"></i></div>
+                <?php }?>
+
               </div>
             </li>
           </ul>
