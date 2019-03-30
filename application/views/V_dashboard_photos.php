@@ -52,6 +52,13 @@
                 <li class="rad-dropmenu-footer"><a href="#">See all alerts</a></li>
               </ul>
             </li>
+            <li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-user"></i>&nbsp; <b><?php echo $this->session->userdata('nama') ?></b></a>
+              <ul class="rad-dropmenu-item">
+                <li class="rad-dropmenu-header"><a href="#"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
+                <li class="rad-dropmenu-header"><a href="#"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -137,7 +144,7 @@
                                   <ul class="dropdown-menu">
                                     <li> <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a></li>
                                     <li> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
-                                    
+
                                   </ul>
                                 </div>
 

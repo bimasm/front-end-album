@@ -52,6 +52,14 @@
                 <li class="rad-dropmenu-footer"><a href="#">See all alerts</a></li>
               </ul>
             </li>
+
+            <li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-user"></i>&nbsp; <b><?php echo $this->session->userdata('nama') ?></b></a>
+              <ul class="rad-dropmenu-item">
+                <li class="rad-dropmenu-header"><a href="#"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
+                <li class="rad-dropmenu-header"><a href="#"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -96,24 +104,24 @@
     </nav>
   </aside>
 
-<main>
-  <section>
-    <div class="rad-body-wrapper">
-      <div class="container-fluid">
-        
-        <div class="row">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Bar Chart</h3>
-              </div>
-              <div class="panel-body">
-                <div id="barChart" class="rad-chart"></div>
+  <main>
+    <section>
+      <div class="rad-body-wrapper">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Bar Chart</h3>
+                </div>
+                <div class="panel-body">
+                  <div id="barChart" class="rad-chart"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>

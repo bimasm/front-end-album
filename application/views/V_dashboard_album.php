@@ -52,6 +52,13 @@
                 <li class="rad-dropmenu-footer"><a href="#">See all alerts</a></li>
               </ul>
             </li>
+            <li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-user"></i>&nbsp; <b><?php echo $this->session->userdata('nama') ?></b></a>
+              <ul class="rad-dropmenu-item">
+                <li class="rad-dropmenu-header"><a href="#"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
+                <li class="rad-dropmenu-header"><a href="#"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
