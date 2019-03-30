@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 
-	
+
 		$this->load->view('V_dashboard_user');
 		$this->load->view('V_footer_dashboard');
 
@@ -38,6 +38,15 @@ class Dashboard extends CI_Controller {
 
 		
 		$this->load->view('V_dashboard_photos');
+		$this->load->view('V_footer_dashboard');
+
+	}
+
+	public function user_profile()
+	{
+
+		
+		$this->load->view('V_dashboard_user_profile');
 		$this->load->view('V_footer_dashboard');
 
 	}
