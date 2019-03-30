@@ -134,11 +134,14 @@
                                   <a class="text-black"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-cogs" style="color: #e51f40"></i>
                                   </a>
-                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a>
-                                  </div>
+                                  <ul class="dropdown-menu">
+                                    <li> <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a></li>
+                                    <li> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
+                                    
+                                  </ul>
                                 </div>
+
+
                               </center>
                             </th>
                           </tr>

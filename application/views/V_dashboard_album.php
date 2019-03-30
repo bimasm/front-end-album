@@ -129,30 +129,34 @@
                             <th style="text-align: center;"> haha </th>
                             <th style="text-align: center;"> hihi </th>
                             <th>
-                              <center>
-                                <div class="dropdown">
-                                  <a class="text-black"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-cogs" style="color: #e51f40"></i>
-                                  </a>
-                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a>
-                                  </div>
-                                </div>
-                              </center>
-                            </th>
-                          </tr>
-                        <?php } ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                             <center>
+                              <div class="dropdown">
+                                <a class="text-black"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fa fa-cogs" style="color: #e51f40"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li> <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a></li>
+                                  <li> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
+                                  
+                                </ul>
+                              </div>
+
+
+                            </center>
+                          </th>
+                        </th>
+                      </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</section>
+</main>
 
 
