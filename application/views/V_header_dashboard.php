@@ -62,7 +62,7 @@
   <aside>
     <nav class="rad-sidebar">
       <ul>
-        <li class="active">
+        <li class="hidup">
           <a href="<?php echo base_url('Dashboard'); ?>" class="inbox">
             <i class="fa fa-dashboard"><span class="icon-bg rad-bg-success"></span></i>
             <span class="rad-sidebar-item">Dashboard</span>
