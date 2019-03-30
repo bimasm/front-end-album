@@ -13,7 +13,9 @@ a,
 a:hover {
   text-decoration: none;
 }
-
+.hidup{
+  background: #263340;
+}
 .rad-navigation {
   position: fixed;
   left: 0;
@@ -106,7 +108,7 @@ a:hover {
   top: 40px;
   min-width: 250px;
   background: white;
-  border-top: 5px solid #2f4050;
+  border-top: 5px solid #F9FAFB;
   border-radius: 2px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   display: none;
@@ -117,7 +119,7 @@ a:hover {
   position: absolute;
   border-width: 0 10px 10px 10px;
   border-style: solid;
-  border-color: #2f4050 transparent;
+  border-color: #F9FAFB transparent;
   top: -14px;
   right: 8px;
 }
@@ -197,9 +199,7 @@ a:hover {
 .rad-sidebar li:hover {
   background: #263340;
 }
-.active{
-  background: #263340;
-}
+
 
 .rad-sidebar li:hover .icon-bg {
   -webkit-transform: translate3d(0, 0, 0);
