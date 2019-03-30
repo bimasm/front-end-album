@@ -68,7 +68,7 @@
             <span class="rad-sidebar-item">Dashboard</span>
           </a>
         </li>
-        <li class="hidup">
+        <li>
           <a href="<?php echo base_url('Dashboard/dashboard_album'); ?>">
             <i class="fa fa-file">
               <span class="icon-bg rad-bg-primary"></span>
@@ -76,7 +76,7 @@
             <span class="rad-sidebar-item">Album</span>
           </a>
         </li>
-        <li>
+        <li class="hidup">
           <a href="<?php echo base_url('Dashboard/dashboard_photos'); ?>">
             <i class="fa fa-image">
               <span class="icon-bg rad-bg-danger"></span>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="panel-body">
                   <div class="table-responsive m-t-40">
-                    <table id="tableep" class="table">
+                    <table id="example" class="table">
                       <thead>
                         <tr>
 
@@ -156,13 +156,3 @@
   </main>
 
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tableep').DataTable({
-        columnDefs        : [{
-          'searchable'    : false,
-          'targets'       : [0, 1, 3]
-        }],
-      });
-    });
-  </script>

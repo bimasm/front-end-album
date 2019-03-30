@@ -109,7 +109,7 @@
                 </div>
                 <div class="panel-body">
                   <div class="table-responsive m-t-40">
-                    <table id="tableep" class="table">
+                    <table id="example" class="table">
                       <thead>
                         <tr>
 
@@ -156,13 +156,3 @@
   </main>
 
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tableep').DataTable({
-        columnDefs        : [{
-          'searchable'    : false,
-          'targets'       : [0, 1, 3]
-        }],
-      });
-    });
-  </script>
