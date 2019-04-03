@@ -20,7 +20,8 @@ class Home extends CI_Controller {
 	{
 
 		$this->load->view('V_header');
-		$this->load->view('V_home');
+		$data['album'] = $this->M_album->show_album();
+		$this->load->view('V_home',$data);
 		$this->load->view('V_footer');
 	}
 	public function do_add_album()

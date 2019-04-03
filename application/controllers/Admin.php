@@ -10,6 +10,8 @@ class Admin extends CI_Controller {
 		$this->load->helper(array('url','form','security'));
 		$this->load->model('M_notif');
 		$this->load->model('M_user');
+		$this->load->model('M_album');
+
 
 		
 		// $logged_in = $this->session->userdata('status')=='login' && ($this->session->userdata('profil')=='1' || $this->session->userdata('profil')=='2');
@@ -26,7 +28,7 @@ class Admin extends CI_Controller {
 		
 
 	}
-
+ 
 	public function dashboard ()
 	{
 		if ($this->session->userdata('statses') == "admin") {
@@ -58,7 +60,12 @@ class Admin extends CI_Controller {
 	{
 
 		if ($this->session->userdata('statses') == "admin") {
-		$this->load->view('V_dashboard_album_admin');
+		$data['notification'] = $this->M_notif->show();
+		$data['angka'] = $this->M_notif->jumlah();
+		$data['jmluser'] = $this->M_notif->jmluser();
+		$data['jmlalbum'] = $this->M_notif->jmlalbum();
+		$data['album'] = $this->M_album->show_album();
+		$this->load->view('V_dashboard_album_admin',$data);
 		$this->load->view('V_footer_dashboard');
 		}else{
 		redirect(base_url("admin"));
