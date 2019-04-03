@@ -29,7 +29,8 @@ class Admin extends CI_Controller {
 
 	public function dashboard ()
 	{
-
+		if ($this->session->userdata('statses') == "admin") {
+		
 		$data['notification'] = $this->M_notif->show();
 		$data['angka'] = $this->M_notif->jumlah();
 		$data['jmluser'] = $this->M_notif->jmluser();
@@ -37,35 +38,70 @@ class Admin extends CI_Controller {
 		// print_r($data);
 		$this->load->view('V_dashboard_admin',$data);
 		$this->load->view('V_footer_dashboard');
-
+		}else{
+		redirect(base_url("admin"));
+		}
 	}
+
 	public function photos()
 	{
 
-		
+		if ($this->session->userdata('statses') == "admin") {
 		$this->load->view('V_dashboard_photos_admin');
 		$this->load->view('V_footer_dashboard');
-
+		}else{
+		redirect(base_url("admin"));
+		}
 	}
 
 	public function album()
 	{
 
-		
+		if ($this->session->userdata('statses') == "admin") {
 		$this->load->view('V_dashboard_album_admin');
 		$this->load->view('V_footer_dashboard');
-
+		}else{
+		redirect(base_url("admin"));
+		}
 	}
 	public function users()
 	{
 
-		
+		if ($this->session->userdata('statses') == "admin") {
 		$this->load->view('V_dashboard_user_admin');
 		$this->load->view('V_footer_dashboard');
-
+		}else{
+		redirect(base_url("admin"));
+		}
 	}
 	public function login(){
+		$username=$this->input->post('username');
+		$password=$this->input->post('password');
+		
+		$cek=$this->M_user->cek_admin($username,$password)->num_rows();
+		
+		
+		if ($cek>0) {
+			
+			$data_session = array(
+				'username' => $username,
+				'password' => $password,
+				'nama' => $username,
+				'statses' => "admin" 
+				);
+			$this->session->set_userdata($data_session);
+			
+			redirect(base_url('admin/dashboard'));
 
+		}else{
+			
+			redirect(base_url('admin'));
+		}
+	}
+	public function logout(){
+		$this->session->unset_userdata();
+		$this->session->sess_destroy();
+		redirect(base_url('admin'));
 	}
 
 }

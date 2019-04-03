@@ -21,7 +21,6 @@ class M_user extends CI_Model{
 		return $this->db->query("INSERT INTO `notification`(`id_notif`, `keterangan`, `username`) VALUES ('','new user','$username')");
 	}
 		function cek_admin($username,$password){		
-		// return $this->db->query("SELECT * FROM `user` WHERE `username`='$username' AND `password`='$password' LIMIT 1");
+		return $this->db->query("SELECT * FROM `admin` WHERE `username`='$username' AND `password`='$password' LIMIT 1");
 	}
 }	
-}
