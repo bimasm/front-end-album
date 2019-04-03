@@ -36,6 +36,7 @@ class Register extends CI_Controller {
 			redirect(base_url("register"));
 		}else{
 			$this->M_user->register($nama,$email,$no_telp,$username,$password);
+			$this->M_user->notif($username);
 			redirect(base_url("login"));
 		}
 	}
