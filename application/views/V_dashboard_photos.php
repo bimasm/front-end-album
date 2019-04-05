@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Basic Dashboard</title>
+  <title>User Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -18,7 +18,7 @@
 
 <body>
 
-    <section>
+  <section>
     <header>
       <nav class="rad-navigation">
         <div class="rad-logo-container">
@@ -35,8 +35,9 @@
                 <i class="fa fa-user"></i>&nbsp; <b><?php echo $this->session->userdata('nama') ?></b>
               </a>
               <ul class="dropdown-menu">
-                <li> <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
-                <li> <a class="dropdown-item" href="<?php echo base_url('Dashboard/user_profile'); ?>"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+                
+                <li> <a class="dropdown-item" href="<?php echo base_url('Dashboard/user_profile/').$this->session->userdata('username'); ?>"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+                <li> <a class="dropdown-item" href="<?php echo base_url('login/logout');?>"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
 
               </ul>
             </li>
@@ -58,7 +59,7 @@
           </a>
         </li>
         <li>
-          <a href="<?php echo base_url('Dashboard/dashboard_album'); ?>">
+          <a href="<?php echo base_url('Dashboard/album'); ?>">
             <i class="fa fa-file">
               <span class="icon-bg rad-bg-primary"></span>
             </i>
@@ -66,7 +67,7 @@
           </a>
         </li>
         <li class="hidup">
-          <a href="<?php echo base_url('Dashboard/dashboard_photos'); ?>">
+          <a href="<?php echo base_url('Dashboard/photos'); ?>">
             <i class="fa fa-image">
               <span class="icon-bg rad-bg-danger"></span>
             </i>
@@ -105,19 +106,22 @@
 
                           <th style="text-align: center;">No</th>
                           <th style="text-align: center;">Photos Name</th>
-                          <th style="text-align: center;">Photos Description</th>
+                          <th style="text-align: center;">Description</th>
+                          <th style="text-align: center;">Album</th>
                           <th style="text-align: center;">Action</th>
                         </tr>
                       </thead>
                       <tbody>
+                      <?php $noo = 1; ?>
                         <?php
                         $no = 1;
-                        for ($i=0; $i < 5; $i++) { 
+                         foreach ($foto as $i) {
                           ?>
                           <tr>
                             <th style="text-align: center;"><?php echo $no++ ?></th>
-                            <th style="text-align: center;"> haha </th>
-                            <th style="text-align: center;"> hihi </th>
+                            <th style="text-align: center;"> <image style="width:60px;height:40px" src="<?php echo base_url('assets/uploads/').$i->gambar; ?>"> </th>
+                            <th style="text-align: center;"> <?php echo $i->deskripsi;?> </th>
+                            <th style="text-align: center;"> <?php echo $i->album;?> </th>
                             <th>
                               <center>
                                 <div class="dropdown">
@@ -125,8 +129,8 @@
                                     <i class="fa fa-cogs" style="color: #e51f40"></i>
                                   </a>
                                   <ul class="dropdown-menu">
-                                    <li> <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a></li>
-                                    <li> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
+                                    <li> <a data-toggle="modal" data-target="#edit<?php echo $noo++ ?>"><i class="fa fa-pencil" ></i>&nbsp; Edit</a></li>
+                                    <li> <a class="dropdown-item" href="<?php echo base_url();?>dashboard/deleteimg/<?php echo $i->gambar;?>"><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
 
                                   </ul>
                                 </div>
@@ -148,4 +152,42 @@
     </section>
   </main>
 
+<?php $noo = 1; ?>
+<?php foreach ($foto as $o) { ?>
+
+<div id="edit<?php echo $noo++ ?>" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header"><br>
+        <h4 class="modal-title">Edit Foto</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <form action="<?php echo base_url(); ?>dashboard/editfoto" method = "POST">
+        <div class="modal-body">  
+          <div class="col-md-12"><br>
+           <div class="form-group">
+           
+              <center><img style="width:300px;height:200px" class="img-fluid img-thumbnail" src="<?php echo base_url('assets/uploads/').$o->gambar; ?>" alt=""></center>
+              
+            </div>
+
+             <div class="form-group">
+              <label class="form-control-label" for="input-address">Description</label>
+              <input type="text" class="form-control" name="deskripsi" required="" value="<?php echo $o->deskripsi; ?>">
+              <input type="text"  name="gambar"  value="<?php echo $o->gambar; ?>" hidden>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn text-white btn btn-primary" >Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+ <?php } ?>
 

@@ -105,9 +105,24 @@
        <a href="<?php echo base_url('Home'); ?>""> <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"><?php foreach ($album as $row) { ?><?php echo $row->nama_album;?><?php } ?></h1>
        </a>
      </div>
-     <div class="col-6" align="right">
+     <?php 
+
+     foreach ($album as $row) { 
+     	$s=$row->owner;
+     }
+
+     	if ($this->session->userdata('statses')=="login") {
+     		if ($s==$this->session->userdata('username')) {
+     			echo '<div class="col-6" align="right">
       <span ><a href="" style="margin-top: 30px" data-toggle="modal" data-target="#modal_add" class="btn btn-primary btn-xl shadow"><i class="fa fa-plus"></i>&nbsp; Add Photos</a></span>
-    </div>
+    </div>';
+     		}else{
+     			
+     		}
+     	}else{
+     		
+     	}
+     ?>
   </div>
   <hr class="mt-2 mb-5">
 <?php $no = 1; ?>
@@ -149,6 +164,7 @@
               <label class="form-control-label" for="input-address">Description</label>
               <textarea class="form-control" name="deskripsi"></textarea>
               <input type="text" name="album" value="<?php foreach ($album as $row) { ?><?php echo $row->nama_album;?><?php } ?>" hidden>
+              <input type="text" name="owner" value="<?php foreach ($album as $row) { ?><?php echo $this->session->userdata('username');?><?php } ?>" hidden>
             </div>
 
           </div>

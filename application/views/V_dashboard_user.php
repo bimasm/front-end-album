@@ -35,8 +35,9 @@
                 <i class="fa fa-user"></i>&nbsp; <b><?php echo $this->session->userdata('nama') ?></b>
               </a>
               <ul class="dropdown-menu">
-                <li> <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
-                <li> <a class="dropdown-item" href="<?php echo base_url('Dashboard/user_profile'); ?>"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+                
+                <li> <a class="dropdown-item" href="<?php echo base_url('Dashboard/user_profile/').$this->session->userdata('username'); ?>"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
+                <li> <a class="dropdown-item" href="<?php echo base_url('login/logout');?>"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
 
               </ul>
             </li>
@@ -46,7 +47,6 @@
       </nav>
     </header>
   </section>
-
 
   <aside>
     <nav class="rad-sidebar">
@@ -58,7 +58,7 @@
           </a>
         </li>
         <li>
-          <a href="<?php echo base_url('Dashboard/dashboard_album'); ?>">
+          <a href="<?php echo base_url('Dashboard/album'); ?>">
             <i class="fa fa-file">
               <span class="icon-bg rad-bg-primary"></span>
             </i>
@@ -66,7 +66,7 @@
           </a>
         </li>
         <li>
-          <a href="<?php echo base_url('Dashboard/dashboard_photos'); ?>">
+          <a href="<?php echo base_url('Dashboard/photos'); ?>">
             <i class="fa fa-image">
               <span class="icon-bg rad-bg-danger"></span>
             </i>
@@ -86,21 +86,40 @@
   </aside>
 
   <main>
-    <section>
+       <section>
       <div class="rad-body-wrapper">
         <div class="container-fluid">
 
           <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Bar Chart</h3>
-                </div>
-                <div class="panel-body">
-                  <div id="barChart" class="rad-chart"></div>
-                </div>
+            <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading1">
+                <h3 class="panel-title text-center">Album</h3>
+              </div>
+              <div class="panel-body">
+               <h1 class="counter text-center text-primary" style="font-size:20;"><b><?php foreach($jmlalbumuser as $o){ ?>
+
+                 <?php echo $o->total; ?>
+
+                  <?php } ?></b></h1>
               </div>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading2">
+                <h3 class="panel-title text-center">Foto</h3>
+              </div>
+              <div class="panel-body">
+               <h1 class="counter text-center text-primary" style="font-size:20;"><b><?php foreach($jmlphotouser as $o){ ?>
+
+                 <?php echo $o->total; ?>
+
+                  <?php } ?></b></h1>
+              </div>
+            </div>
+          </div>
+          
           </div>
         </div>
       </div>

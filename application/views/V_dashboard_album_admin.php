@@ -18,7 +18,7 @@
 
 <body>
 
-    <section>
+      <section>
     <header>
       <nav class="rad-navigation">
         <div class="rad-logo-container">
@@ -56,8 +56,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li> <a class="dropdown-item" href="<?php echo base_url('admin/logout'); ?>"><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
-                <li> <a class="dropdown-item" href="<?php echo base_url('Dashboard/user_profile'); ?>"><i class="fa fa-cog"></i>&nbsp;Profile Setting</a></li>
-
+                
               </ul>
             </li>
 
@@ -132,7 +131,7 @@
 
                           <th style="text-align: center;">No</th>
                           <th style="text-align: center;">Album Name</th>
-                          <th style="text-align: center;">Album Description</th>
+                          <th style="text-align: center;">Album Owner</th>
                           <th style="text-align: center;">Action</th>
                         </tr>
                       </thead>
@@ -146,7 +145,7 @@
                           <tr>
                             <th style="text-align: center;"><?php echo $no++ ?></th>
                             <th style="text-align: center;"><?php echo $key->nama_album;?></th>
-                            <th style="text-align: center;"><?php echo $key->keterangan;?></th>
+                            <th style="text-align: center;"><?php echo $key->owner;?></th>
                             <th>
                              <center>
                               <div class="dropdown">
@@ -154,8 +153,8 @@
                                   <i class="fa fa-cogs" style="color: #e51f40"></i>
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li> <a class="dropdown-item" href="#"><i class="fa fa-pencil" ></i>&nbsp; Edit</a></li>
-                                  <li> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal_delete" data-idposition=""><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
+                                 
+                                  <li> <a class="dropdown-item" href="<?php echo base_url();?>admin/deletealbum/<?php echo $key->album_id;?>"><i class="fa fa-trash"></i>&nbsp; Delete</a></li>
                                   
                                 </ul>
                               </div>

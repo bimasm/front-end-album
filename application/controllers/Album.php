@@ -9,10 +9,7 @@ class Album extends CI_Controller {
 		$this->load->library(array('session','form_validation',));
 		$this->load->helper(array('url','form','security'));
 		$this->load->model('M_album');
-		// $logged_in = $this->session->userdata('status')=='login' && ($this->session->userdata('profil')=='1' || $this->session->userdata('profil')=='2');
-		// if(!$logged_in){
-		// 	redirect('Login');
-		// }
+
 	}
 
 	public function index()
@@ -36,6 +33,7 @@ class Album extends CI_Controller {
         
         $deskripsi = $this->input->post('deskripsi');
         $album= $this->input->post('album');
+        $owner= $this->input->post('owner');
         if(!empty($_FILES['gambar']['name']))
         {       
             $config['upload_path'] =  realpath('./assets/uploads/');
@@ -60,7 +58,8 @@ class Album extends CI_Controller {
                 
                 'gambar'         => $file['file_name'],
                 'deskripsi'     => $deskripsi,
-                'album'           => $album
+                'album'           => $album,
+                'owner'           => $owner
             );
             
                 $insert = $this->M_album->add_foto($data);
